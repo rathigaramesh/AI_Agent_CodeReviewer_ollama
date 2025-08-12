@@ -1,0 +1,50 @@
+# Save as: README.md
+# Streamlit Ollama Code Review & Deployment App
+
+## Overview
+This sample app demonstrates a multi-agent pipeline using a local Ollama LLM to perform code review, vulnerability scanning, efficiency suggestions, impact analysis, approval, and a simulated deployment.
+
+## Requirements
+- Python 3.10+
+- Ollama installed and running on your machine with at least one model pulled. Example models: `gpt-oss:latest`, `llama3.1:latest`.
+
+See Ollama docs: https://github.com/ollama/ollama and the `ollama` python package. The app uses the `ollama` python package if installed; otherwise it calls the REST API at http://localhost:11434/api/generate. (Make sure Ollama is running and model is available.)
+
+## Setup
+1. Create virtual env (recommended):
+
+```bash
+python -m venv venv
+source venv/bin/activate   # Linux / Mac
+venv\\Scripts\\activate  # Windows
+pip install -r requirements.txt
+```
+
+2. Start Ollama and run the model you want to use (example):
+
+```bash
+# Start Ollama (GUI or CLI)
+ollama run gpt-oss:latest
+# alternatively use the GUI app and ensure the model is pulled and running
+```
+
+3. Run the Streamlit app:
+
+```bash
+streamlit run app.py
+```
+
+## Notes & Security
+- This app **does not** perform real static analysis; it relies on the language model. Treat results as suggestions and always run real static scanners (e.g., ESLint, SpotBugs, Snyk, etc.).
+- Deployment in `agents.deploy_agent` is simulated: it writes the file to a local `deployed/` folder. Replace this logic with your CI/CD/SSH deployment mechanism.
+- For production, never expose your Ollama REST API to public networks without proper auth.
+
+## Customization
+- Set environment variable `OLLAMA_MODEL` to pick a different model (default `gpt-oss:latest`).
+- You can change model call behavior in `agents.py` to use streaming or chat-style prompts.
+
+## Troubleshooting
+- If you see errors communicating with Ollama, ensure Ollama is running and the model is available (use `ollama list` and `ollama run <model>`). If using REST fallback, ensure the server listens on `http://localhost:11434`.
+
+
+# ---------- END OF PROJECT ----------

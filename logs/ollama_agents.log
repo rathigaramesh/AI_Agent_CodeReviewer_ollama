@@ -1,0 +1,139 @@
+2025-08-11 20:04:59,501 - INFO - Prompt sent to model gpt-oss:latest: You are a senior software engineer. Perform a code review on sample.java.
+
+1) High level summary of intent.
+2) Bugs or syntax errors with line hints.
+3) Suggested fixes.
+4) Tests to add.
+5) Risk areas...
+2025-08-11 20:17:24,890 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-08-11 20:17:24,890 - INFO - Response from model: **1) High\u2011level intent**
+
+`Main` is a toy Java program that demonstrates basic arithmetic and console output.  
+It declares two integer variables (`first` and `second`), adds them together, and prints...
+2025-08-11 20:17:26,912 - INFO - Prompt sent to model gpt-oss:latest: You are a security engineer. Analyze sample.java for vulnerabilities:
+- XSS
+- SQL injection
+- Insecure deserialization
+- File handling issues
+- Secrets in code
+- Misconfigurations
+
+Give severity and f...
+2025-08-11 20:31:32,774 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-08-11 20:31:32,775 - INFO - Response from model: ### Summary
+The Java snippet you provided is a very small “Hello World”\u2011style program that:
+
+```java
+int first = 10;
+int second = 20;
+int sum   = first + second;
+System.out.println(first + " + " + sec...
+2025-08-11 20:31:34,780 - INFO - Prompt sent to model gpt-oss:latest: You are a performance engineer. Review sample.java for:
+- Algorithm inefficiencies
+- Memory/CPU issues
+- Inefficient I/O
+
+Give suggestions and code examples.
+
+Content:
+class Main {
+
+  public static ...
+2025-08-11 20:44:57,256 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-08-11 20:44:57,257 - INFO - Response from model: Below is a quick “performance\u2010engineer” audit of the tiny snippet you posted.  
+Even though this program is trivial, the same advice applies to larger applications that do the same kinds of things (nu...
+2025-08-11 20:44:59,278 - INFO - Prompt sent to model gpt-oss:latest: You are a release manager. Based on sample.java changes, give:
+- Impact on services/modules/configs
+- DB migration needs
+- Backward compatibility
+- Rollout strategy
+- Tests and monitoring
+
+Content:
+cl...
+2025-08-11 21:02:24,082 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-08-11 21:02:24,083 - INFO - Response from model: ---
+
+## 1. High\u2011Level Overview
+
+> **File Changed** – `sample.java` (located in `src/main/java/.../Main.java`)  
+> **Change Summary** – A trivial “Hello\u2011world” style test harness that adds two integers...
+2025-08-11 21:17:35,216 - INFO - Prompt sent to model gpt-oss:latest: You are a senior software engineer. Perform a code review on sample.java.
+
+1) High level summary of intent.
+2) Bugs or syntax errors with line hints.
+3) Suggested fixes.
+4) Tests to add.
+5) Risk areas...
+2025-08-11 21:19:13,590 - INFO - Prompt sent to model gpt-oss:latest: You are a senior software engineer. Perform a code review on sample.java.
+
+1) High level summary of intent.
+2) Bugs or syntax errors with line hints.
+3) Suggested fixes.
+4) Tests to add.
+5) Risk areas...
+2025-08-11 21:19:22,825 - INFO - Prompt sent to model gpt-oss:latest: You are a senior software engineer. Perform a code review on sample.java.
+
+1) High level summary of intent.
+2) Bugs or syntax errors with line hints.
+3) Suggested fixes.
+4) Tests to add.
+5) Risk areas...
+2025-08-11 21:23:56,218 - INFO - Prompt sent to model gpt-oss:latest: You are a senior software engineer. Perform a code review on sample.java.
+
+1) High level summary of intent.
+2) Bugs or syntax errors with line hints.
+3) Suggested fixes.
+4) Tests to add.
+5) Risk areas...
+2025-08-11 21:32:32,450 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-08-11 21:32:32,451 - INFO - Response from model: ## 1\ufe0f\u20e3 High\u2011Level Summary  
+The program named **Main** demonstrates a trivial use of basic arithmetic in Java.  
+* It declares two integer variables (`first` = 10, `second` = 20).  
+* It adds them tog...
+2025-08-11 21:32:34,467 - INFO - Prompt sent to model gpt-oss:latest: You are a security engineer. Analyze sample.java for vulnerabilities:
+- XSS
+- SQL injection
+- Insecure deserialization
+- File handling issues
+- Secrets in code
+- Misconfigurations
+
+Give severity and f...
+2025-08-11 21:50:33,476 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-08-11 21:50:33,478 - INFO - Response from model: ## 1. High\u2011level intent  
+
+The program simply demonstrates how to add two hard\u2011coded integers (`first` and `second`) and print the arithmetic expression together with the result to the console.  
+It i...
+2025-08-11 21:50:35,491 - INFO - Prompt sent to model gpt-oss:latest: You are a security engineer. Analyze sample.java for vulnerabilities:
+- XSS
+- SQL injection
+- Insecure deserialization
+- File handling issues
+- Secrets in code
+- Misconfigurations
+
+Give severity and f...
+2025-08-11 22:15:34,401 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-08-11 22:15:34,403 - INFO - Response from model: **Code Review – `sample.java`**
+
+```java
+class Main {
+
+  public static void main(String[] args) {
+    
+    int first = 10;
+    int second = 20;
+
+    // add two numbers
+    int sum = first + second;
+  ...
+2025-08-11 22:15:36,409 - INFO - Prompt sent to model gpt-oss:latest: You are a security engineer. Analyze sample.java for vulnerabilities:
+- XSS
+- SQL injection
+- Insecure deserialization
+- File handling issues
+- Secrets in code
+- Misconfigurations
+
+Give severity and f...
